@@ -1,0 +1,13 @@
+{
+  "name": "ilastra-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page ILASTRA — Ikatan Alumni Politeknik Astra",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/styles.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.16"
+  }
+}

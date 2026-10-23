@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ILASTRA — Ikatan Alumni Politeknik Astra</title>
+  <meta name="description" content="Rumah resmi alumni Politeknik Astra: info resmi, program kerja, event, dokumentasi kegiatan, dan Magang Hub untuk kolaborasi lintas angkatan." />
+  <meta property="og:title" content="ILASTRA — Ikatan Alumni Politeknik Astra" />
+  <meta property="og:description" content="Sekali Astra, selamanya keluarga. Gabung network alumni Politeknik Astra." />
+  <meta property="og:image" content="assets/logo-ilastra.png" />
+  <meta name="theme-color" content="#085EA7" />
+  <link rel="icon" type="image/png" href="assets/logo-ilastra.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="bg-white font-sans text-slate-700 antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="top" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-900/80 backdrop-blur transition-colors">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="assets/logo-ilastra.png" alt="Logo ILASTRA" class="h-9 w-9 rounded-lg" />
+        <span class="leading-tight text-white">
+          <span class="block text-base font-extrabold tracking-wide">ILASTRA</span>
+          <span class="hidden text-[11px] text-brand-200 sm:block">Ikatan Alumni Politeknik Astra</span>
+        </span>
+      </a>
+      <ul class="hidden items-center gap-7 text-sm font-medium text-brand-100 lg:flex">
+        <li><a href="#tentang" class="hover:text-white">Tentang</a></li>
+        <li><a href="#proker" class="hover:text-white">Program Kerja</a></li>
+        <li><a href="#event" class="hover:text-white">Event</a></li>
+        <li><a href="#recap" class="hover:text-white">Recap</a></li>
+        <li><a href="#magang" class="hover:text-white">Magang Hub</a></li>
+      </ul>
+      <div class="hidden items-center gap-3 lg:flex">
+        <a href="#update-data" class="rounded-lg px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/10">Update Data</a>
+        <a href="#gabung" class="rounded-lg bg-spark-500 px-4 py-2 text-sm font-bold text-brand-950 hover:bg-spark-400">Gabung Network</a>
+      </div>
+      <button id="menuBtn" class="rounded-lg p-2 text-white ring-1 ring-white/20 lg:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-brand-900 px-4 pb-5 lg:hidden">
+      <ul class="space-y-1 pt-3 text-brand-100">
+        <li><a href="#tentang" class="block rounded-lg px-3 py-2 hover:bg-white/10">Tentang</a></li>
+        <li><a href="#proker" class="block rounded-lg px-3 py-2 hover:bg-white/10">Program Kerja</a></li>
+        <li><a href="#event" class="block rounded-lg px-3 py-2 hover:bg-white/10">Event</a></li>
+        <li><a href="#recap" class="block rounded-lg px-3 py-2 hover:bg-white/10">Recap</a></li>
+        <li><a href="#magang" class="block rounded-lg px-3 py-2 hover:bg-white/10">Magang Hub</a></li>
+      </ul>
+      <div class="mt-3 grid grid-cols-2 gap-2">
+        <a href="#update-data" class="rounded-lg px-4 py-2.5 text-center text-sm font-semibold text-white ring-1 ring-white/30">Update Data</a>
+        <a href="#gabung" class="rounded-lg bg-spark-500 px-4 py-2.5 text-center text-sm font-bold text-brand-950">Gabung Network</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ 1. HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-800 to-brand-600 pt-16 text-white">
+      <div class="grid-bg absolute inset-0"></div>
+      <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-sky-accent/20 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-12 lg:px-8">
+        <div class="lg:col-span-7">
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 font-mono text-xs font-semibold uppercase tracking-widest text-brand-100 ring-1 ring-white/15">
+            <span class="h-2 w-2 rounded-full bg-spark-500"></span> Rumah Resmi Alumni Politeknik Astra
+          </p>
+          <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+            Sekali Astra,<br /><span class="text-spark-400">selamanya keluarga.</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-brand-100">
+            ILASTRA menyatukan alumni Politeknik Astra lintas angkatan, jurusan, dan industri. Tempat kita berbagi info resmi, tumbuh bareng lewat program kerja, dan membuka pintu kesempatan buat adik-adik tingkat.
+          </p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#gabung" class="inline-flex items-center justify-center gap-2 rounded-xl bg-spark-500 px-6 py-3.5 font-bold text-brand-950 shadow-lg shadow-spark-500/20 hover:bg-spark-400">
+              Gabung Network
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a href="#update-data" class="inline-flex items-center justify-center rounded-xl px-6 py-3.5 font-semibold text-white ring-1 ring-white/30 hover:bg-white/10">Update Data Alumni</a>
+          </div>
+          <!-- Angka di bawah adalah CONTOH — ganti dengan data resmi -->
+          <dl class="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-white/15 pt-8">
+            <div><dt class="text-xs uppercase tracking-wider text-brand-200">Alumni Terhubung</dt><dd class="mt-1 text-2xl font-extrabold sm:text-3xl">5.000+</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-brand-200">Event / Tahun</dt><dd class="mt-1 text-2xl font-extrabold sm:text-3xl">24</dd></div>
+            <div><dt class="text-xs uppercase tracking-wider text-brand-200">Lowongan Magang</dt><dd class="mt-1 text-2xl font-extrabold sm:text-3xl">80+</dd></div>
+          </dl>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-sm">
+            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-spark-500/30 to-sky-accent/30 blur-2xl"></div>
+            <div class="relative rounded-[2rem] bg-white/5 p-6 ring-1 ring-white/15 backdrop-blur">
+              <img src="assets/logo-ilastra.png" alt="Logo ILASTRA — Ikatan Alumni Politeknik Astra" class="w-full rounded-2xl" />
+              <div class="mt-5 flex items-center justify-between rounded-xl bg-brand-950/60 px-4 py-3">
+                <span class="font-mono text-xs text-brand-200">#AlumniPolmanAstra</span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-300"><span class="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>Network aktif</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 1b. ABOUT ============ -->
+    <section id="tentang" class="scroll-mt-16 py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2">
+          <div class="reveal">
+            <p class="font-mono text-sm font-semibold uppercase tracking-widest text-brand-600">Tentang ILASTRA</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-brand-950 sm:text-4xl">Dari kampus yang sama, kita jalan lebih jauh bersama.</h2>
+            <p class="mt-5 text-lg leading-relaxed text-slate-600">
+              ILASTRA (Ikatan Alumni Politeknik Astra) adalah wadah resmi seluruh lulusan Politeknik Astra. Kami hadir untuk merawat silaturahmi, menjadi jembatan antara alumni dan almamater, serta menyalakan kolaborasi yang berdampak — buat karier, industri, dan masyarakat.
+            </p>
+            <div class="mt-8 rounded-2xl border-l-4 border-spark-500 bg-brand-50 p-6">
+              <h3 class="text-sm font-bold uppercase tracking-wider text-brand-700">Visi</h3>
+              <p class="mt-2 text-lg font-semibold text-brand-950">Menjadi jejaring alumni vokasi yang solid, kolaboratif, dan berkontribusi nyata bagi almamater, industri, dan bangsa.</p>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-brand-700">Misi</h3>
+            <ol class="mt-4 space-y-4">
+              <li class="flex gap-4"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-600 font-mono text-sm font-bold text-white">01</span><p class="pt-1">Membangun database dan jejaring alumni yang aktif, mutakhir, dan saling terhubung.</p></li>
+              <li class="flex gap-4"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-600 font-mono text-sm font-bold text-white">02</span><p class="pt-1">Mendorong pengembangan karier dan kompetensi alumni lewat mentorship dan knowledge sharing.</p></li>
+              <li class="flex gap-4"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-600 font-mono text-sm font-bold text-white">03</span><p class="pt-1">Membuka akses magang dan kerja bagi mahasiswa serta alumni muda Politeknik Astra.</p></li>
+              <li class="flex gap-4"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-600 font-mono text-sm font-bold text-white">04</span><p class="pt-1">Menginisiasi aksi sosial yang memberi dampak langsung bagi masyarakat.</p></li>
+            </ol>
+            <h3 class="mt-10 text-sm font-bold uppercase tracking-wider text-brand-700">Nilai Kebersamaan Kita</h3>
+            <div class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div class="rounded-xl border border-slate-200 p-4 text-center"><div class="text-2xl">🤝</div><p class="mt-2 text-sm font-bold text-brand-950">Kekeluargaan</p></div>
+              <div class="rounded-xl border border-slate-200 p-4 text-center"><div class="text-2xl">⚙️</div><p class="mt-2 text-sm font-bold text-brand-950">Profesional</p></div>
+              <div class="rounded-xl border border-slate-200 p-4 text-center"><div class="text-2xl">🚀</div><p class="mt-2 text-sm font-bold text-brand-950">Kolaboratif</p></div>
+              <div class="rounded-xl border border-slate-200 p-4 text-center"><div class="text-2xl">💙</div><p class="mt-2 text-sm font-bold text-brand-950">Berdampak</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PROGRAM KERJA ============ -->
+    <section id="proker" class="scroll-mt-16 bg-slate-50 py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="font-mono text-sm font-semibold uppercase tracking-widest text-brand-600">Program Kerja</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-brand-950 sm:text-4xl">Proker unggulan, digerakkan alumni untuk alumni.</h2>
+          <p class="mt-4 text-lg text-slate-600">Empat pilar yang jadi fokus pengurus ILASTRA. Mau ikut jadi relawan atau mentor? Pintunya selalu terbuka.</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal group rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-6-9v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">ILASTRA Mentorship</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Program 1-on-1 dan group mentoring bareng alumni senior dari berbagai industri — dari teknik, manufaktur, sampai digital.</p>
+            <a href="#gabung" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 group-hover:gap-2 transition-all">Jadi Mentor / Mentee →</a>
+          </article>
+          <article class="reveal group rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-spark-500 text-brand-950">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.4-1.8M17 20H7m10 0v-2c0-.7-.1-1.3-.4-1.8M7 20H2v-2a3 3 0 015.4-1.8M7 20v-2c0-.7.1-1.3.4-1.8m0 0a5 5 0 019.2 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">Alumni Gathering</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Temu kangen lintas angkatan, reuni akbar, sampai chapter regional. Karena koneksi terbaik lahir dari obrolan santai.</p>
+            <a href="#event" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 group-hover:gap-2 transition-all">Lihat Jadwal →</a>
+          </article>
+          <article class="reveal group rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500 text-white">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.3 6.3a4.5 4.5 0 016.4 0L12 7.6l1.3-1.3a4.5 4.5 0 116.4 6.4L12 20.3l-7.7-7.6a4.5 4.5 0 010-6.4z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">Social Impact</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">ILASTRA Peduli: donor darah, bakti sosial, beasiswa adik tingkat, dan pelatihan vokasi untuk masyarakat sekitar.</p>
+            <a href="#recap" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 group-hover:gap-2 transition-all">Lihat Dampaknya →</a>
+          </article>
+          <article class="reveal group rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-accent text-brand-950">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">Pengembangan Karier</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Webinar upskilling, review CV, simulasi interview, dan info lowongan eksklusif dari jejaring alumni.</p>
+            <a href="#magang" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 group-hover:gap-2 transition-all">Ke Magang Hub →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. EVENT ============ -->
+    <section id="event" class="scroll-mt-16 py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <p class="font-mono text-sm font-semibold uppercase tracking-widest text-brand-600">Event</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-brand-950 sm:text-4xl">Catat tanggalnya, sampai ketemu di sana!</h2>
+            <p class="mt-4 text-lg text-slate-600">Agenda alumni yang lagi jalan dan yang segera datang. Kursi terbatas — amankan tempatmu duluan.</p>
+          </div>
+          <div class="inline-flex rounded-xl bg-slate-100 p-1 text-sm font-semibold" role="tablist" aria-label="Filter event">
+            <button class="event-tab rounded-lg px-4 py-2" data-filter="all" role="tab">Semua</button>
+            <button class="event-tab rounded-lg px-4 py-2" data-filter="ongoing" role="tab">Berlangsung</button>
+            <button class="event-tab rounded-lg px-4 py-2" data-filter="upcoming" role="tab">Akan Datang</button>
+          </div>
+        </div>
+        <div id="eventList" class="mt-12 grid gap-6 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- ============ 4. REPORT / RECAP ============ -->
+    <section id="recap" class="scroll-mt-16 bg-brand-950 py-20 text-white md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="font-mono text-sm font-semibold uppercase tracking-widest text-spark-400">Report Event</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Jejak yang sudah kita tinggalkan bersama.</h2>
+          <p class="mt-4 text-lg text-brand-200">Dokumentasi dan laporan singkat kegiatan yang sudah terlaksana. Terima kasih buat setiap alumni yang hadir dan berkontribusi.</p>
+        </div>
+        <div id="recapList" class="mt-14 space-y-8"></div>
+      </div>
+    </section>
+
+    <!-- ============ 5. MAGANG HUB ============ -->
+    <section id="magang" class="scroll-mt-16 py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p class="font-mono text-sm font-semibold uppercase tracking-widest text-brand-600">Magang Hub</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-brand-950 sm:text-4xl">Dari alumni, untuk generasi berikutnya.</h2>
+            <p class="mt-4 text-lg text-slate-600">Jembatan antara alumni yang membuka kesempatan dengan mahasiswa dan alumni muda Politeknik Astra yang siap belajar langsung di industri.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row lg:col-span-5 lg:justify-end">
+            <a href="#ajukan-magang" class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-5 py-3 font-bold text-white hover:bg-brand-700">Ajukan Magang</a>
+            <a href="#pasang-lowongan" class="inline-flex items-center justify-center rounded-xl bg-spark-500 px-5 py-3 font-bold text-brand-950 hover:bg-spark-400">Pasang Lowongan Magang</a>
+          </div>
+        </div>
+
+        <div class="reveal mt-10 grid gap-4 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200 sm:grid-cols-3 sm:p-5">
+          <label class="sm:col-span-2">
+            <span class="sr-only">Cari posisi atau perusahaan</span>
+            <input id="jobSearch" type="search" placeholder="Cari posisi, perusahaan, atau skill…" class="w-full rounded-xl border-0 bg-white px-4 py-3 text-sm ring-1 ring-slate-200 placeholder:text-slate-400 focus:ring-2 focus:ring-brand-500" />
+          </label>
+          <label>
+            <span class="sr-only">Filter tipe</span>
+            <select id="jobType" class="w-full rounded-xl border-0 bg-white px-4 py-3 text-sm ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-500">
+              <option value="all">Semua tipe</option>
+              <option value="Onsite">Onsite</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Remote">Remote</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="jobList" class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+        <p id="jobEmpty" class="mt-8 hidden rounded-xl bg-slate-50 p-6 text-center text-slate-500">Belum ada lowongan yang cocok. Coba kata kunci lain, ya!</p>
+
+        <!-- How it works -->
+        <div class="mt-16 grid gap-6 md:grid-cols-2">
+          <div id="ajukan-magang" class="reveal scroll-mt-24 rounded-2xl border border-brand-100 bg-brand-50 p-7">
+            <p class="font-mono text-xs font-bold uppercase tracking-widest text-brand-600">Untuk Mahasiswa & Alumni Muda</p>
+            <h3 class="mt-2 text-xl font-extrabold text-brand-950">Cara Ajukan Magang</h3>
+            <ol class="mt-4 space-y-2 text-sm text-slate-700">
+              <li><b class="text-brand-700">1.</b> Pilih lowongan yang sesuai minat dan jurusanmu.</li>
+              <li><b class="text-brand-700">2.</b> Klik “Ajukan”, isi form dan unggah CV + portofolio.</li>
+              <li><b class="text-brand-700">3.</b> Tim Magang Hub meneruskan ke alumni pemberi lowongan.</li>
+              <li><b class="text-brand-700">4.</b> Siap-siap interview — dan semangat!</li>
+            </ol>
+            <a href="#" data-form="ajukan" class="mt-6 inline-flex rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white hover:bg-brand-700">Isi Form Pengajuan</a>
+          </div>
+          <div id="pasang-lowongan" class="reveal scroll-mt-24 rounded-2xl border border-spark-400/40 bg-amber-50 p-7">
+            <p class="font-mono text-xs font-bold uppercase tracking-widest text-spark-600">Untuk Alumni & Perusahaan</p>
+            <h3 class="mt-2 text-xl font-extrabold text-brand-950">Cara Pasang Lowongan</h3>
+            <ol class="mt-4 space-y-2 text-sm text-slate-700">
+              <li><b class="text-spark-600">1.</b> Isi detail posisi, durasi, dan kualifikasi singkat.</li>
+              <li><b class="text-spark-600">2.</b> Tim kami verifikasi maksimal 2×24 jam kerja.</li>
+              <li><b class="text-spark-600">3.</b> Lowongan tayang di Magang Hub & kanal alumni.</li>
+              <li><b class="text-spark-600">4.</b> Terima kandidat terkurasi dari Politeknik Astra.</li>
+            </ol>
+            <a href="#" data-form="pasang" class="mt-6 inline-flex rounded-xl bg-spark-500 px-5 py-3 text-sm font-bold text-brand-950 hover:bg-spark-400">Pasang Lowongan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section id="gabung" class="scroll-mt-16 px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 to-brand-950 px-6 py-14 text-center text-white sm:px-12">
+        <div class="grid-bg absolute inset-0"></div>
+        <div class="relative">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Satu almamater. Ribuan peluang. Kamu bagian darinya.</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-brand-100">Gabung network ILASTRA dan pastikan datamu selalu update — supaya info event, lowongan, dan kabar alumni nggak ada yang kelewat.</p>
+          <div id="update-data" class="mt-8 flex scroll-mt-24 flex-col justify-center gap-3 sm:flex-row">
+            <a href="#" data-form="gabung" class="rounded-xl bg-spark-500 px-6 py-3.5 font-bold text-brand-950 hover:bg-spark-400">Gabung Network</a>
+            <a href="#" data-form="update" class="rounded-xl px-6 py-3.5 font-semibold text-white ring-1 ring-white/40 hover:bg-white/10">Update Data Alumni</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo-ilastra.png" alt="" class="h-10 w-10 rounded-lg" />
+          <div><p class="font-extrabold text-brand-950">ILASTRA</p><p class="text-xs text-slate-500">Ikatan Alumni Politeknik Astra</p></div>
+        </div>
+        <p class="mt-4 max-w-sm text-sm text-slate-600">Pusat informasi resmi, kegiatan, dan kolaborasi alumni Politeknik Astra.</p>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-brand-950">Jelajahi</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#tentang" class="hover:text-brand-600">Tentang</a></li>
+          <li><a href="#proker" class="hover:text-brand-600">Program Kerja</a></li>
+          <li><a href="#event" class="hover:text-brand-600">Event</a></li>
+          <li><a href="#magang" class="hover:text-brand-600">Magang Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-brand-950">Kontak</p>
+        <!-- Ganti dengan kontak resmi -->
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>Email: <span class="text-slate-500">[email resmi ILASTRA]</span></li>
+          <li>Instagram: <span class="text-slate-500">[@akun resmi]</span></li>
+          <li>LinkedIn: <span class="text-slate-500">[halaman resmi]</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-200 py-5 text-center text-xs text-slate-500">© <span id="year"></span> ILASTRA — Ikatan Alumni Politeknik Astra. Dibuat dengan 💙 oleh alumni.</div>
+  </footer>
+
+  <!-- ============ FORM MODAL (placeholder) ============ -->
+  <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-brand-950/70 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+      <h3 id="modalTitle" class="text-xl font-extrabold text-brand-950"></h3>
+      <p id="modalBody" class="mt-2 text-sm text-slate-600"></p>
+      <div class="mt-6 flex justify-end">
+        <button id="modalClose" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-bold text-white hover:bg-brand-700">Oke, siap!</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ================== DATA (CONTOH — ganti dengan data resmi / fetch dari API/Google Sheet) ==================
+    const EVENTS = [
+      { status: 'ongoing', title: 'ILASTRA Mentorship Batch 3', date: '1 Okt – 30 Nov 2026', time: 'Sesi tiap Sabtu, 09.00 – 11.00 WIB', place: 'Online via Zoom', online: true, desc: 'Program mentoring 8 minggu: career mapping, soft skill, dan persiapan masuk industri bareng alumni senior.', cta: 'Daftar Mentee' },
+      { status: 'upcoming', title: 'Webinar: Karier di Industri Otomotif 4.0', date: 'Sabtu, 14 Nov 2026', time: '13.00 – 15.30 WIB', place: 'Online via Zoom', online: true, desc: 'Ngobrol bareng alumni praktisi tentang otomasi, IoT di lini produksi, dan skill yang dicari industri hari ini.', cta: 'RSVP Sekarang' },
+      { status: 'upcoming', title: 'Reuni Akbar & Alumni Gathering 2026', date: 'Minggu, 13 Des 2026', time: '08.00 – 14.00 WIB', place: 'Kampus Politeknik Astra (lokasi menyusul)', online: false, desc: 'Temu kangen lintas angkatan, talkshow alumni inspiratif, bazar UMKM alumni, dan doorprize.', cta: 'Daftar / RSVP' }
+    ];
+
+    const RECAPS = [
+      { title: 'ILASTRA Peduli: Donor Darah & Bakti Sosial', date: 'Agustus 2026', attendees: 150, pillars: ['Social Impact', 'Kolaborasi Kampus'], outputs: ['100+ kantong darah terkumpul', 'Paket sembako untuk warga sekitar kampus', 'Relawan dari 10+ angkatan'], summary: 'Aksi kemanusiaan kolaborasi alumni, mahasiswa, dan unit kesehatan setempat.' },
+      { title: 'Career Day: Review CV & Mock Interview', date: 'Juni 2026', attendees: 220, pillars: ['Pengembangan Karier', 'Mentorship'], outputs: ['80 CV direview langsung oleh alumni HR', '40 sesi mock interview', '12 peserta lanjut ke proses rekrutmen'], summary: 'Satu hari penuh membantu mahasiswa tingkat akhir dan alumni muda siap bersaing di dunia kerja.' }
+    ];
+
+    const JOBS = [
+      { role: 'Production Engineering Intern', company: 'PT Contoh Manufaktur Otomotif', founder: 'Alumni ILASTRA (contoh)', location: 'Cikarang', type: 'Onsite', duration: '6 bulan', quals: ['Mahasiswa Teknik Mesin/Mekatronika', 'Paham dasar PLC', 'Siap shift'] },
+      { role: 'Frontend Developer Intern', company: 'Startup Alumni (Contoh)', founder: 'Alumni ILASTRA (contoh)', location: 'Jakarta', type: 'Hybrid', duration: '3 bulan', quals: ['HTML, CSS, JavaScript', 'Familiar React/Vue', 'Punya portofolio'] },
+      { role: 'Quality Control Intern', company: 'PT Contoh Komponen Presisi', founder: 'Alumni ILASTRA (contoh)', location: 'Karawang', type: 'Onsite', duration: '4 bulan', quals: ['Teknik Mesin/Produksi', 'Teliti & paham alat ukur', 'Dasar Excel'] },
+      { role: 'Data Analyst Intern', company: 'Konsultan Digital Alumni (Contoh)', founder: 'Alumni ILASTRA (contoh)', location: 'Remote', type: 'Remote', duration: '3 bulan', quals: ['SQL & Excel', 'Paham visualisasi data', 'Komunikatif'] },
+      { role: 'Maintenance Technician Intern', company: 'PT Contoh Heavy Equipment', founder: 'Alumni ILASTRA (contoh)', location: 'Balikpapan', type: 'Onsite', duration: '6 bulan', quals: ['Teknik Alat Berat', 'Paham hidrolik dasar', 'Siap ditempatkan di site'] },
+      { role: 'Digital Marketing Intern', company: 'UMKM Alumni (Contoh)', founder: 'Alumni ILASTRA (contoh)', location: 'Bekasi', type: 'Hybrid', duration: '3 bulan', quals: ['Kreatif konten sosmed', 'Basic Canva/Figma', 'Paham insight IG/TikTok'] }
+    ];
+
+    // ================== RENDER: EVENT ==================
+    const badge = s => s === 'ongoing'
+      ? '<span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-bold text-emerald-700"><span class="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500"></span>Sedang Berlangsung</span>'
+      : '<span class="rounded-full bg-brand-100 px-2.5 py-1 text-xs font-bold text-brand-700">Akan Datang</span>';
+    const icon = d => `<svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${d}"/></svg>`;
+    const I_CAL = 'M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 011 1v13a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1z';
+    const I_CLOCK = 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z';
+    const I_PIN = 'M17.7 16.7L13.4 21a2 2 0 01-2.8 0l-4.3-4.3a8 8 0 1111.4 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z';
+    const I_VIDEO = 'M15 10l4.6-2.3A1 1 0 0121 8.6v6.8a1 1 0 01-1.4.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z';
+
+    function renderEvents(filter = 'all') {
+      document.querySelectorAll('.event-tab').forEach(b => {
+        const on = b.dataset.filter === filter;
+        b.classList.toggle('bg-white', on); b.classList.toggle('shadow', on);
+        b.classList.toggle('text-brand-700', on); b.classList.toggle('text-slate-500', !on);
+        b.setAttribute('aria-selected', on);
+      });
+      document.getElementById('eventList').innerHTML = EVENTS
+        .filter(e => filter === 'all' || e.status === filter)
+        .map(e => `
+        <article class="flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70">
+          <div class="flex items-center justify-between">${badge(e.status)}<span class="font-mono text-xs text-slate-400">${e.online ? 'ONLINE' : 'OFFLINE'}</span></div>
+          <h3 class="mt-4 text-xl font-bold text-brand-950">${e.title}</h3>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li class="flex gap-2">${icon(I_CAL)}${e.date}</li>
+            <li class="flex gap-2">${icon(I_CLOCK)}${e.time}</li>
+            <li class="flex gap-2">${icon(e.online ? I_VIDEO : I_PIN)}${e.place}</li>
+          </ul>
+          <p class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">${e.desc}</p>
+          <a href="#" data-form="rsvp" data-title="${e.title}" class="mt-6 inline-flex justify-center rounded-xl ${e.status === 'ongoing' ? 'bg-brand-600 text-white hover:bg-brand-700' : 'bg-spark-500 text-brand-950 hover:bg-spark-400'} px-5 py-3 text-sm font-bold">${e.cta}</a>
+        </article>`).join('');
+    }
+    document.querySelectorAll('.event-tab').forEach(b => b.addEventListener('click', () => renderEvents(b.dataset.filter)));
+
+    // ================== RENDER: RECAP ==================
+    const tileColors = ['from-brand-500 to-brand-700', 'from-sky-400 to-brand-600', 'from-spark-500 to-amber-700', 'from-brand-700 to-brand-900'];
+    document.getElementById('recapList').innerHTML = RECAPS.map((r, i) => `
+      <article class="reveal grid gap-8 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 lg:grid-cols-2 lg:p-8">
+        <div class="grid grid-cols-3 grid-rows-2 gap-3 ${i % 2 ? 'lg:order-2' : ''}">
+          ${[0,1,2,3].map(k => `
+            <div class="${k === 0 ? 'col-span-2 row-span-2' : ''} ${k === 3 ? 'hidden' : ''} relative flex aspect-square items-end overflow-hidden rounded-2xl bg-gradient-to-br ${tileColors[(k + i) % 4]} p-3">
+              <svg class="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-white/40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${k === 2 ? 'M14.8 9.8l-4.6-2.6A1 1 0 008.7 8v8a1 1 0 001.5.9l4.6-2.7a1 1 0 000-1.7z' : 'M4 16l4.6-4.6a2 2 0 012.8 0L16 16m-2-2l1.6-1.6a2 2 0 012.8 0L20 14M14 8h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'}"/></svg>
+              <span class="relative font-mono text-[10px] uppercase tracking-wider text-white/80">${k === 2 ? 'Video' : 'Foto'} dokumentasi</span>
+            </div>`).join('')}
+        </div>
+        <div class="${i % 2 ? 'lg:order-1' : ''}">
+          <p class="font-mono text-xs uppercase tracking-widest text-brand-300">${r.date}</p>
+          <h3 class="mt-2 text-2xl font-extrabold">${r.title}</h3>
+          <p class="mt-3 text-brand-200">${r.summary}</p>
+          <div class="mt-6 flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+            <div class="text-4xl font-extrabold text-spark-400">${r.attendees}+</div>
+            <div class="text-sm text-brand-200">peserta hadir<br/><span class="text-xs text-brand-300">(angka contoh)</span></div>
+          </div>
+          <p class="mt-6 text-xs font-bold uppercase tracking-wider text-brand-300">Pilar</p>
+          <div class="mt-2 flex flex-wrap gap-2">${r.pillars.map(p => `<span class="rounded-full bg-brand-600/40 px-3 py-1 text-xs font-semibold text-brand-100 ring-1 ring-brand-400/30">${p}</span>`).join('')}</div>
+          <p class="mt-6 text-xs font-bold uppercase tracking-wider text-brand-300">Output Kegiatan</p>
+          <ul class="mt-2 space-y-2 text-sm">${r.outputs.map(o => `<li class="flex gap-2"><span class="text-spark-400">✓</span>${o}</li>`).join('')}</ul>
+        </div>
+      </article>`).join('');
+
+    // ================== RENDER: JOBS ==================
+    function renderJobs() {
+      const q = document.getElementById('jobSearch').value.toLowerCase().trim();
+      const t = document.getElementById('jobType').value;
+      const list = JOBS.filter(j => (t === 'all' || j.type === t) &&
+        [j.role, j.company, j.location, ...j.quals].join(' ').toLowerCase().includes(q));
+      document.getElementById('jobEmpty').classList.toggle('hidden', list.length > 0);
+      document.getElementById('jobList').innerHTML = list.map(j => `
+        <article class="flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:ring-brand-300">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 font-extrabold text-brand-700">${j.company.replace(/^(PT|CV)\s+/,'').charAt(0)}</div>
+            <span class="rounded-full ${j.type === 'Remote' ? 'bg-emerald-50 text-emerald-700' : j.type === 'Hybrid' ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-700'} px-2.5 py-1 text-xs font-bold">${j.type}</span>
+          </div>
+          <h3 class="mt-4 text-lg font-bold text-brand-950">${j.role}</h3>
+          <p class="text-sm font-medium text-slate-600">${j.company}</p>
+          <p class="mt-1 text-xs text-slate-400">Diposting oleh ${j.founder}</p>
+          <div class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-600">
+            <span class="flex gap-1.5">${icon(I_PIN)}${j.location}</span>
+            <span class="flex gap-1.5">${icon(I_CLOCK)}${j.duration}</span>
+          </div>
+          <ul class="mt-4 flex-1 space-y-1 text-sm text-slate-600">${j.quals.map(x => `<li class="flex gap-2"><span class="text-brand-500">•</span>${x}</li>`).join('')}</ul>
+          <a href="#" data-form="ajukan" data-title="${j.role}" class="mt-5 inline-flex justify-center rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-700">Ajukan Magang</a>
+        </article>`).join('');
+    }
+    document.getElementById('jobSearch').addEventListener('input', renderJobs);
+    document.getElementById('jobType').addEventListener('change', renderJobs);
+
+    // ================== FORM MODAL (placeholder; ganti href dengan link Google Form / backend) ==================
+    const FORMS = {
+      gabung: ['Gabung Network ILASTRA', 'Form pendaftaran network alumni akan segera tersedia. Pantau terus kanal resmi ILASTRA, ya!'],
+      update: ['Update Data Alumni', 'Form update data alumni akan segera tersedia di sini.'],
+      rsvp: ['Daftar / RSVP', 'Form pendaftaran event akan segera tersedia.'],
+      ajukan: ['Ajukan Magang', 'Form pengajuan magang akan segera tersedia.'],
+      pasang: ['Pasang Lowongan Magang', 'Form pemasangan lowongan untuk alumni akan segera tersedia.']
+    };
+    const modal = document.getElementById('modal');
+    let lastFocus = null;
+    const closeModal = () => { modal.classList.add('hidden'); modal.classList.remove('flex'); lastFocus && lastFocus.focus(); };
+    document.addEventListener('click', e => {
+      const a = e.target.closest('[data-form]');
+      if (!a) return;
+      e.preventDefault();
+      lastFocus = a;
+      const [title, body] = FORMS[a.dataset.form];
+      document.getElementById('modalTitle').textContent = a.dataset.title ? `${title}: ${a.dataset.title}` : title;
+      document.getElementById('modalBody').textContent = body;
+      modal.classList.remove('hidden'); modal.classList.add('flex');
+      document.getElementById('modalClose').focus();
+    });
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+
+    // ================== NAV + REVEAL ==================
+    const menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden') === false;
+      menuBtn.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', false); }));
+
+    renderEvents(); renderJobs();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const io = 'IntersectionObserver' in window
+      ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: .12 })
+      : null;
+    document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+  </script>
+</body>
+</html>
