@@ -173,6 +173,40 @@
         <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <article class="reveal group flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
             <div class="flex items-start justify-between gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500 text-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.3 6.3a4.5 4.5 0 016.4 0L12 7.6l1.3-1.3a4.5 4.5 0 116.4 6.4L12 20.3l-7.7-7.6a4.5 4.5 0 010-6.4z"/></svg>
+              </div>
+              <span class="rounded-full px-2.5 py-1 text-xs font-bold bg-emerald-100 text-emerald-700">Berjalan</span>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">Bincang Alumni ASTRAtech (BICARA)</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Sharing knowledge dari Alumni untuk Alumni dan Mahasiswa Aktif secara online (Tiap bulan)</p>
+            <p class="mt-4 font-mono text-xs text-slate-400">Social Impact · HKBD</p>
+          </article>
+          <article class="reveal group flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-spark-500 text-brand-950">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.4-1.8M17 20H7m10 0v-2c0-.7-.1-1.3-.4-1.8M7 20H2v-2a3 3 0 015.4-1.8M7 20v-2c0-.7.1-1.3.4-1.8m0 0a5 5 0 019.2 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <span class="rounded-full px-2.5 py-1 text-xs font-bold bg-emerald-100 text-emerald-700">Berjalan</span>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">Kumpul, Ngopi &amp; Duduk Bareng (KOPDAR)</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Gathering atau reuni akbar secara offline (Tiap tahun)</p>
+            <p class="mt-4 font-mono text-xs text-slate-400">Gathering · HKBD</p>
+          </article>
+          <article class="reveal group flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500 text-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.3 6.3a4.5 4.5 0 016.4 0L12 7.6l1.3-1.3a4.5 4.5 0 116.4 6.4L12 20.3l-7.7-7.6a4.5 4.5 0 010-6.4z"/></svg>
+              </div>
+              <span class="rounded-full px-2.5 py-1 text-xs font-bold bg-slate-100 text-slate-600">Selesai</span>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-brand-950">Komunitas Alumni</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">Pembentukan komunitas tiap angkatan</p>
+            <p class="mt-4 font-mono text-xs text-slate-400">Social Impact · HKBD</p>
+            <a href="https://chat.whatsapp.com/FYxFiJVEFXS1AlYpkJ6DN9" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 group-hover:gap-2 transition-all">Join WA Community →</a>
+          </article>
+          <article class="reveal group flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:ring-brand-300">
+            <div class="flex items-start justify-between gap-3">
               <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-6-9v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
               </div>
@@ -371,10 +405,9 @@
 
   <script>
     // ================== DATA (CONTOH — ganti dengan data resmi / fetch dari API/Google Sheet) ==================
+    // Sumber: Sheet ILASTRA_Data_Website, tab Event (masih Draft, link pendaftaran belum ada)
     const EVENTS = [
-      { status: 'ongoing', title: 'ILASTRA Mentorship Batch 3', date: '1 Okt – 30 Nov 2026', time: 'Sesi tiap Sabtu, 09.00 – 11.00 WIB', place: 'Online via Zoom', online: true, desc: 'Program mentoring 8 minggu: career mapping, soft skill, dan persiapan masuk industri bareng alumni senior.', cta: 'Daftar Mentee' },
-      { status: 'upcoming', title: 'Webinar: Karier di Industri Otomotif 4.0', date: 'Sabtu, 14 Nov 2026', time: '13.00 – 15.30 WIB', place: 'Online via Zoom', online: true, desc: 'Ngobrol bareng alumni praktisi tentang otomasi, IoT di lini produksi, dan skill yang dicari industri hari ini.', cta: 'RSVP Sekarang' },
-      { status: 'upcoming', title: 'Reuni Akbar & Alumni Gathering 2026', date: 'Minggu, 13 Des 2026', time: '08.00 – 14.00 WIB', place: 'Kampus Politeknik Astra (lokasi menyusul)', online: false, desc: 'Temu kangen lintas angkatan, talkshow alumni inspiratif, bazar UMKM alumni, dan doorprize.', cta: 'Daftar / RSVP' }
+      { status: 'upcoming', title: 'KOPDAR 2026: Sync, Scale Up & Empower (Sinergi Bisnis dan Kolaborasi Alumni)', date: 'Sabtu–Minggu, 14–15 Nov 2026', time: '09.00 – 12.00', place: 'Kampus ASTRAtech', online: false, desc: 'Gathering atau reuni akbar dengan tema bisnis untuk alumni dan mahasiswa.', quota: '50 peserta', fee: 'Rp50.000 (Alumni) · Rp30.000 (Mahasiswa)', link: '', cta: 'Daftar / RSVP' }
     ];
 
     const RECAPS = [
@@ -399,6 +432,8 @@
     const I_CAL = 'M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 011 1v13a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1z';
     const I_CLOCK = 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z';
     const I_PIN = 'M17.7 16.7L13.4 21a2 2 0 01-2.8 0l-4.3-4.3a8 8 0 1111.4 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z';
+    const I_USERS = 'M17 20h5v-2a3 3 0 00-5.4-1.8M17 20H7m10 0v-2c0-.7-.1-1.3-.4-1.8M7 20H2v-2a3 3 0 015.4-1.8M7 20v-2c0-.7.1-1.3.4-1.8m0 0a5 5 0 019.2 0M15 7a3 3 0 11-6 0 3 3 0 016 0z';
+    const I_TICKET = 'M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z';
     const I_VIDEO = 'M15 10l4.6-2.3A1 1 0 0121 8.6v6.8a1 1 0 01-1.4.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z';
 
     function renderEvents(filter = 'all') {
@@ -418,9 +453,13 @@
             <li class="flex gap-2">${icon(I_CAL)}${e.date}</li>
             <li class="flex gap-2">${icon(I_CLOCK)}${e.time}</li>
             <li class="flex gap-2">${icon(e.online ? I_VIDEO : I_PIN)}${e.place}</li>
+            ${e.quota ? `<li class="flex gap-2">${icon(I_USERS)}Kuota ${e.quota}</li>` : ''}
+            ${e.fee ? `<li class="flex gap-2">${icon(I_TICKET)}${e.fee}</li>` : ''}
           </ul>
           <p class="mt-4 flex-1 text-sm leading-relaxed text-slate-600">${e.desc}</p>
-          <a href="#" data-form="rsvp" data-title="${e.title}" class="mt-6 inline-flex justify-center rounded-xl ${e.status === 'ongoing' ? 'bg-brand-600 text-white hover:bg-brand-700' : 'bg-spark-500 text-brand-950 hover:bg-spark-400'} px-5 py-3 text-sm font-bold">${e.cta}</a>
+          ${e.link
+            ? `<a href="${e.link}" target="_blank" rel="noopener" class="mt-6 inline-flex justify-center rounded-xl ${e.status === 'ongoing' ? 'bg-brand-600 text-white hover:bg-brand-700' : 'bg-spark-500 text-brand-950 hover:bg-spark-400'} px-5 py-3 text-sm font-bold">${e.cta}</a>`
+            : `<span class="mt-6 inline-flex cursor-not-allowed justify-center rounded-xl bg-slate-100 px-5 py-3 text-sm font-bold text-slate-500">Pendaftaran segera dibuka</span>`}
         </article>`).join('');
     }
     document.querySelectorAll('.event-tab').forEach(b => b.addEventListener('click', () => renderEvents(b.dataset.filter)));
