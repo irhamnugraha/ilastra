@@ -419,10 +419,14 @@
     <button id="lbClose" class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-brand-950 hover:bg-slate-100" aria-label="Tutup">✕</button>
     <div class="flex w-full max-w-3xl items-center gap-2">
       <button id="lbPrev" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-2xl text-white hover:bg-white/20" aria-label="Foto sebelumnya">‹</button>
-      <img id="lbImg" src="" alt="" class="max-h-[75vh] min-w-0 flex-1 rounded-xl object-contain" />
+      <img id="lbImg" src="" alt="" class="max-h-[58vh] min-w-0 flex-1 rounded-xl object-contain" />
       <button id="lbNext" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-2xl text-white hover:bg-white/20" aria-label="Foto berikutnya">›</button>
     </div>
-    <p class="mt-4 text-center text-sm text-white"><span id="lbCap" class="font-semibold"></span> <span id="lbCount" class="ml-2 font-mono text-brand-300"></span></p>
+    <div class="mt-4 w-full max-w-2xl text-center text-white">
+      <p class="text-sm"><span id="lbCap" class="font-semibold"></span> <span id="lbCount" class="ml-2 font-mono text-brand-300"></span></p>
+      <p id="lbMeta" class="mt-1 text-xs text-spark-400"></p>
+      <p id="lbDesc" class="mx-auto mt-2 max-h-[18vh] overflow-y-auto text-sm leading-relaxed text-brand-100"></p>
+    </div>
   </div>
 
   <!-- ============ FORM MODAL (placeholder) ============ -->
@@ -447,10 +451,10 @@
     const RECAPS = [
       { slug: 'kopdar-2025', n: 4, title: 'Kopdar 2025: Reconnect & Recharge', date: 'Minggu, 30 November 2025', place: 'Warna-Warni Resto & Cafe', desc: 'Reconnect and recharge menjadi tema Kopdar yang membawa alumni bernostalgia dan saling bertukar asa. Selain temu sapa yang menjadi ajang perkenalan antar alumni, juga ada diskusi terbuka dan games yang buat suasana semakin seru.' },
       { slug: 'bicara', n: 1, title: 'BICARA Eps. 1', date: 'Rabu, 5 November 2025', place: 'Live Instagram @ilastra_astratech', desc: 'Bincang Alumni Politeknik Astra. Episode perdana: “Sudah Wisuda, Haruskah Langsung Kerja?”' },
-      { slug: 'talkshow-alumni', n: 4, title: 'Talkshow Alumni: Jejak Prestasi Suarakan Inspirasi', date: '27 Agustus 2025', place: '', desc: 'Sebagai bagian dari rangkaian kegiatan Pengenalan Kehidupan Kampus bagi Mahasiswa Baru (PKKMB) 2025, Politeknik Astra menyelenggarakan acara “Jejak Prestasi Suarakan Inspirasi: Talkshow Alumni”.' },
-      { slug: 'adart', n: 1, title: 'Pengesahan AD ART', date: '14 Juni 2025', place: '', desc: 'Pengesahan Anggaran Dasar dan Anggaran Rumah Tangga (AD ART) ILASTRA dan penetapan pengurus periode 2024–2029.' },
+      { slug: 'talkshow-alumni', n: 4, title: 'Talkshow Alumni: Jejak Prestasi Suarakan Inspirasi', date: '27 Agustus 2025', place: 'Kampus ASTRAtech', desc: 'Sebagai bagian dari rangkaian kegiatan Pengenalan Kehidupan Kampus bagi Mahasiswa Baru (PKKMB) 2025, Politeknik Astra menyelenggarakan acara “Jejak Prestasi Suarakan Inspirasi: Talkshow Alumni”.' },
+      { slug: 'adart', n: 1, title: 'Pengesahan AD ART', date: '14 Juni 2025', place: 'Kampus ASTRAtech', desc: 'Pengesahan Anggaran Dasar dan Anggaran Rumah Tangga (AD ART) ILASTRA dan penetapan pengurus periode 2024–2029.' },
       { slug: 'astratech-run', n: 4, title: 'ASTRAtech Run 2024 by ILASTRA', date: '24 November 2024', place: 'Kampus ASTRAtech', stat: '500++ peserta', desc: 'ASTRAtech Run 2024 hadir dengan tema “Eco Fun Run – Save The World” 🌱🌎' },
-      { slug: 'workshop-qcc', n: 1, title: 'Workshop QCC dan SS', date: 'Kamis, 25 Juli 2024', place: 'Kampus ASTRAtech', desc: 'Workshop Quality Control Circle (QCC) yang berkolaborasi dengan NOVASTECH untuk mahasiswa Politeknik Astra. Workshop ini membekali peserta dengan pemahaman dan pengalaman praktis penerapan QCC, mulai dari identifikasi masalah, analisis, hingga pengembangan solusi inovatif untuk meningkatkan kualitas dan efektivitas proses kerja.' },
+      { slug: 'workshop-qcc', n: 1, title: 'Workshop QCC dan SS', date: 'Kamis, 25 Juli 2024', place: 'Komunal A-STAR, Kampus ASTRAtech', desc: 'Workshop Quality Control Circle (QCC) yang berkolaborasi dengan NOVASTECH untuk mahasiswa Politeknik Astra. Workshop ini membekali peserta dengan pemahaman dan pengalaman praktis penerapan QCC, mulai dari identifikasi masalah, analisis, hingga pengembangan solusi inovatif untuk meningkatkan kualitas dan efektivitas proses kerja.' },
       { slug: 'ilastra-mengajar', n: 3, title: 'ILASTRA Mengajar', date: '15–16 Juli 2024', place: 'SMKN 1 Jakarta', desc: 'SMKN 1 Jakarta menjadi tuan rumah program kerja ILASTRA Mengajar pertama! Selama satu tahun pelajaran, siswa mendapatkan Pelatihan Kewirausahaan dalam beberapa sesi. Sesi pertama dan kedua sukses dilaksanakan pada 15 dan 16 Juli 2024.' },
       { slug: 'halbil', n: 4, title: 'Halal Bihalal & Penyerahan SK Kepengurusan', date: '6 Mei 2024', place: 'Kampus ASTRAtech', desc: 'Halal Bihalal Pengurus ILASTRA sekaligus Penyerahan SK Kepengurusan ILASTRA Periode 2024–2029 dari Departemen Kemahasiswaan & Alumni, dilanjutkan dengan pembahasan program kerja ILASTRA tahun 2024.' },
       { slug: 'green-reunion', n: 4, title: 'ILASTRA Green Reunion: Nurturing Our Roots', date: '9 Desember 2023', place: 'Kampus ASTRAtech', desc: 'Reuni alumni ASTRAtech dengan konsep Green Reunion. Setiap alumni diajak berkontribusi terhadap keberlanjutan lingkungan dengan membawa sampah anorganik yang dapat didaur ulang atau dimanfaatkan kembali, sebagai bentuk dukungan terhadap pencapaian Sustainable Development Goals (SDGs).' }
@@ -520,6 +524,7 @@
           ${r.place ? `<p class="mt-1 text-sm text-brand-300">📍 ${esc(r.place)}</p>` : ''}
           ${r.stat ? `<p class="mt-3 inline-flex w-fit rounded-full bg-spark-500 px-3 py-1 text-xs font-bold text-brand-950">${esc(r.stat)}</p>` : ''}
           <p class="mt-3 line-clamp-4 text-sm leading-relaxed text-brand-200">${esc(r.desc)}</p>
+          <button type="button" class="recap-open mt-3 w-fit text-sm font-bold text-spark-400 hover:text-spark-500" data-i="${i}">Selengkapnya →</button>
         </div>
       </article>`).join('');
 
@@ -528,8 +533,8 @@
       const box = document.getElementById('lightbox'), img = document.getElementById('lbImg'),
             cap = document.getElementById('lbCap'), cnt = document.getElementById('lbCount');
       let r = null, k = 1, last = null;
-      const show = () => { img.src = photo(r, k); img.alt = `${r.title} (${k}/${r.n})`; cap.textContent = r.title; cnt.textContent = r.n > 1 ? `${k} / ${r.n}` : '';
-        document.getElementById('lbPrev').hidden = document.getElementById('lbNext').hidden = r.n < 2; };
+      const show = () => { img.src = photo(r, k); img.alt = `${r.title} (${k}/${r.n})`; cap.textContent = r.title; document.getElementById('lbMeta').textContent = [r.date, r.place].filter(Boolean).join(' · '); document.getElementById('lbDesc').textContent = r.desc; cnt.textContent = r.n > 1 ? `${k} / ${r.n}` : '';
+        ['lbPrev','lbNext'].forEach(id => document.getElementById(id).classList.toggle('invisible', r.n < 2)); };
       const open = i => { r = RECAPS[i]; k = 1; show(); box.classList.remove('hidden'); box.classList.add('flex'); document.getElementById('lbClose').focus(); };
       const close = () => { box.classList.add('hidden'); box.classList.remove('flex'); last && last.focus(); };
       const step = d => { k = (k - 1 + d + r.n) % r.n + 1; show(); };
