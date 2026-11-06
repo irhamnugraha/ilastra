@@ -2,7 +2,6 @@
 
 Landing page resmi **ILASTRA (Ikatan Alumni Politeknik Astra)**: profil, program kerja, dan event. Seksi Recap dan Magang Hub sementara dinonaktifkan (masih ada di kode, atribut `hidden`).
 
-- Rancangan lengkap (sitemap, wireframe, copywriting, palet warna & tipografi): [`docs/RANCANGAN.md`](docs/RANCANGAN.md)
 - Halaman: [`index.html`](index.html) (HTML + Tailwind CSS)
 
 ## Menjalankan lokal

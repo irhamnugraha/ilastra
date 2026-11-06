@@ -1,6 +1,7 @@
 {
   "name": "ilastra-landing",
   "private": true,
+  "license": "UNLICENSED",
   "version": "1.0.0",
   "description": "Landing page ILASTRA — Ikatan Alumni Politeknik Astra",
   "scripts": {
