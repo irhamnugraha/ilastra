@@ -45,6 +45,7 @@
         <li><a href="#tentang" class="hover:text-white">Tentang</a></li>
         <li><a href="#proker" class="hover:text-white">Program Kerja</a></li>
         <li><a href="#event" class="hover:text-white">Event</a></li>
+        <li><a href="#recap" class="hover:text-white">Jejak Kegiatan</a></li>
       </ul>
       <div class="hidden items-center gap-3 lg:flex">
         <a href="https://chat.whatsapp.com/FYxFiJVEFXS1AlYpkJ6DN9" target="_blank" rel="noopener" class="rounded-lg px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/10">Update Data</a>
@@ -59,6 +60,7 @@
         <li><a href="#tentang" class="block rounded-lg px-3 py-2 hover:bg-white/10">Tentang</a></li>
         <li><a href="#proker" class="block rounded-lg px-3 py-2 hover:bg-white/10">Program Kerja</a></li>
         <li><a href="#event" class="block rounded-lg px-3 py-2 hover:bg-white/10">Event</a></li>
+        <li><a href="#recap" class="block rounded-lg px-3 py-2 hover:bg-white/10">Jejak Kegiatan</a></li>
       </ul>
       <div class="mt-3 grid grid-cols-2 gap-2">
         <a href="https://chat.whatsapp.com/FYxFiJVEFXS1AlYpkJ6DN9" target="_blank" rel="noopener" class="rounded-lg px-4 py-2.5 text-center text-sm font-semibold text-white ring-1 ring-white/30">Update Data</a>
@@ -280,15 +282,15 @@
     </section>
 
     <!-- ============ 4. REPORT / RECAP ============ -->
-    <!-- DINONAKTIFKAN: data recap masih fiktif. Hapus atribut hidden untuk mengaktifkan. -->
-    <section id="recap" hidden class="scroll-mt-28 bg-brand-950 py-20 text-white md:py-28">
+    <!-- Sumber: Sheet ILASTRA_Data_Website, tab Event (Status = Selesai); foto dari folder Drive Dokumentasi -->
+    <section id="recap" class="scroll-mt-28 bg-brand-950 py-20 text-white md:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-2xl text-center">
-          <p class="font-mono text-sm font-semibold uppercase tracking-widest text-spark-400">Report Event</p>
+          <p class="font-mono text-sm font-semibold uppercase tracking-widest text-spark-400">Jejak Kegiatan</p>
           <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Jejak yang sudah kita tinggalkan bersama.</h2>
-          <p class="mt-4 text-lg text-brand-200">Dokumentasi dan laporan singkat kegiatan yang sudah terlaksana. Terima kasih buat setiap alumni yang hadir dan berkontribusi.</p>
+          <p class="mt-4 text-lg text-brand-200">Dokumentasi kegiatan yang sudah terlaksana. Terima kasih buat setiap alumni yang hadir dan berkontribusi.</p>
         </div>
-        <div id="recapList" class="mt-14 space-y-8"></div>
+        <div id="recapList" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
       </div>
     </section>
 
@@ -387,6 +389,7 @@
           <li><a href="#tentang" class="hover:text-brand-600">Tentang</a></li>
           <li><a href="#proker" class="hover:text-brand-600">Program Kerja</a></li>
           <li><a href="#event" class="hover:text-brand-600">Event</a></li>
+          <li><a href="#recap" class="hover:text-brand-600">Jejak Kegiatan</a></li>
         </ul>
       </div>
       <div>
@@ -411,6 +414,17 @@
     </div>
   </div>
 
+  <!-- ============ LIGHTBOX GALERI JEJAK KEGIATAN ============ -->
+  <div id="lightbox" class="fixed inset-0 z-[80] hidden flex-col items-center justify-center bg-brand-950/90 p-4" role="dialog" aria-modal="true" aria-labelledby="lbCap">
+    <button id="lbClose" class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-brand-950 hover:bg-slate-100" aria-label="Tutup">✕</button>
+    <div class="flex w-full max-w-3xl items-center gap-2">
+      <button id="lbPrev" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-2xl text-white hover:bg-white/20" aria-label="Foto sebelumnya">‹</button>
+      <img id="lbImg" src="" alt="" class="max-h-[75vh] min-w-0 flex-1 rounded-xl object-contain" />
+      <button id="lbNext" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-2xl text-white hover:bg-white/20" aria-label="Foto berikutnya">›</button>
+    </div>
+    <p class="mt-4 text-center text-sm text-white"><span id="lbCap" class="font-semibold"></span> <span id="lbCount" class="ml-2 font-mono text-brand-300"></span></p>
+  </div>
+
   <!-- ============ FORM MODAL (placeholder) ============ -->
   <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-brand-950/70 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
@@ -429,9 +443,17 @@
       { status: 'upcoming', title: 'KOPDAR 2026: Sync, Scale Up & Empower (Sinergi Bisnis dan Kolaborasi Alumni)', date: 'Sabtu, 14 Nov 2026', time: '09.00 – 12.00 WIB', place: 'Kampus ASTRAtech', online: false, desc: 'Gathering atau reuni akbar dengan tema bisnis untuk alumni dan mahasiswa.', quota: '50 peserta', fee: 'Rp50.000 (Alumni) · Rp30.000 (Mahasiswa)', link: 'https://goers.co/kopdarilastra2026', cta: 'Daftar Sekarang' }
     ];
 
+    // Sumber: tab Event (Status = Selesai). Foto: assets/recap/
     const RECAPS = [
-      { title: 'ILASTRA Peduli: Donor Darah & Bakti Sosial', date: 'Agustus 2026', attendees: 150, pillars: ['Social Impact', 'Kolaborasi Kampus'], outputs: ['100+ kantong darah terkumpul', 'Paket sembako untuk warga sekitar kampus', 'Relawan dari 10+ angkatan'], summary: 'Aksi kemanusiaan kolaborasi alumni, mahasiswa, dan unit kesehatan setempat.' },
-      { title: 'Career Day: Review CV & Mock Interview', date: 'Juni 2026', attendees: 220, pillars: ['Pengembangan Karier', 'Mentorship'], outputs: ['80 CV direview langsung oleh alumni HR', '40 sesi mock interview', '12 peserta lanjut ke proses rekrutmen'], summary: 'Satu hari penuh membantu mahasiswa tingkat akhir dan alumni muda siap bersaing di dunia kerja.' }
+      { slug: 'kopdar-2025', n: 4, title: 'Kopdar 2025: Reconnect & Recharge', date: 'Minggu, 30 November 2025', place: 'Warna-Warni Resto & Cafe', desc: 'Reconnect and recharge menjadi tema Kopdar yang membawa alumni bernostalgia dan saling bertukar asa. Selain temu sapa yang menjadi ajang perkenalan antar alumni, juga ada diskusi terbuka dan games yang buat suasana semakin seru.' },
+      { slug: 'bicara', n: 1, title: 'BICARA Eps. 1', date: 'Rabu, 5 November 2025', place: 'Live Instagram @ilastra_astratech', desc: 'Bincang Alumni Politeknik Astra. Episode perdana: “Sudah Wisuda, Haruskah Langsung Kerja?”' },
+      { slug: 'talkshow-alumni', n: 4, title: 'Talkshow Alumni: Jejak Prestasi Suarakan Inspirasi', date: '27 Agustus 2025', place: '', desc: 'Sebagai bagian dari rangkaian kegiatan Pengenalan Kehidupan Kampus bagi Mahasiswa Baru (PKKMB) 2025, Politeknik Astra menyelenggarakan acara “Jejak Prestasi Suarakan Inspirasi: Talkshow Alumni”.' },
+      { slug: 'adart', n: 1, title: 'Pengesahan AD ART', date: '14 Juni 2025', place: '', desc: 'Pengesahan Anggaran Dasar dan Anggaran Rumah Tangga (AD ART) ILASTRA dan penetapan pengurus periode 2024–2029.' },
+      { slug: 'astratech-run', n: 4, title: 'ASTRAtech Run 2024 by ILASTRA', date: '24 November 2024', place: 'Kampus ASTRAtech', stat: '500++ peserta', desc: 'ASTRAtech Run 2024 hadir dengan tema “Eco Fun Run – Save The World” 🌱🌎' },
+      { slug: 'workshop-qcc', n: 1, title: 'Workshop QCC dan SS', date: 'Kamis, 25 Juli 2024', place: 'Kampus ASTRAtech', desc: 'Workshop Quality Control Circle (QCC) yang berkolaborasi dengan NOVASTECH untuk mahasiswa Politeknik Astra. Workshop ini membekali peserta dengan pemahaman dan pengalaman praktis penerapan QCC, mulai dari identifikasi masalah, analisis, hingga pengembangan solusi inovatif untuk meningkatkan kualitas dan efektivitas proses kerja.' },
+      { slug: 'ilastra-mengajar', n: 3, title: 'ILASTRA Mengajar', date: '15–16 Juli 2024', place: 'SMKN 1 Jakarta', desc: 'SMKN 1 Jakarta menjadi tuan rumah program kerja ILASTRA Mengajar pertama! Selama satu tahun pelajaran, siswa mendapatkan Pelatihan Kewirausahaan dalam beberapa sesi. Sesi pertama dan kedua sukses dilaksanakan pada 15 dan 16 Juli 2024.' },
+      { slug: 'halbil', n: 4, title: 'Halal Bihalal & Penyerahan SK Kepengurusan', date: '6 Mei 2024', place: 'Kampus ASTRAtech', desc: 'Halal Bihalal Pengurus ILASTRA sekaligus Penyerahan SK Kepengurusan ILASTRA Periode 2024–2029 dari Departemen Kemahasiswaan & Alumni, dilanjutkan dengan pembahasan program kerja ILASTRA tahun 2024.' },
+      { slug: 'green-reunion', n: 4, title: 'ILASTRA Green Reunion: Nurturing Our Roots', date: '9 Desember 2023', place: 'Kampus ASTRAtech', desc: 'Reuni alumni ASTRAtech dengan konsep Green Reunion. Setiap alumni diajak berkontribusi terhadap keberlanjutan lingkungan dengan membawa sampah anorganik yang dapat didaur ulang atau dimanfaatkan kembali, sebagai bentuk dukungan terhadap pencapaian Sustainable Development Goals (SDGs).' }
     ];
 
     const JOBS = [
@@ -484,30 +506,41 @@
     document.querySelectorAll('.event-tab').forEach(b => b.addEventListener('click', () => renderEvents(b.dataset.filter)));
 
     // ================== RENDER: RECAP ==================
-    const tileColors = ['from-brand-500 to-brand-700', 'from-sky-400 to-brand-600', 'from-spark-500 to-amber-700', 'from-brand-700 to-brand-900'];
+    const esc = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const photo = (r, k) => `assets/recap/${r.slug}-${k}.webp`;
     document.getElementById('recapList').innerHTML = RECAPS.map((r, i) => `
-      <article class="reveal grid gap-8 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 lg:grid-cols-2 lg:p-8">
-        <div class="grid grid-cols-3 grid-rows-2 gap-3 ${i % 2 ? 'lg:order-2' : ''}">
-          ${[0,1,2,3].map(k => `
-            <div class="${k === 0 ? 'col-span-2 row-span-2' : ''} ${k === 3 ? 'hidden' : ''} relative flex aspect-square items-end overflow-hidden rounded-2xl bg-gradient-to-br ${tileColors[(k + i) % 4]} p-3">
-              <svg class="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 text-white/40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${k === 2 ? 'M14.8 9.8l-4.6-2.6A1 1 0 008.7 8v8a1 1 0 001.5.9l4.6-2.7a1 1 0 000-1.7z' : 'M4 16l4.6-4.6a2 2 0 012.8 0L16 16m-2-2l1.6-1.6a2 2 0 012.8 0L20 14M14 8h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z'}"/></svg>
-              <span class="relative font-mono text-[10px] uppercase tracking-wider text-white/80">${k === 2 ? 'Video' : 'Foto'} dokumentasi</span>
-            </div>`).join('')}
-        </div>
-        <div class="${i % 2 ? 'lg:order-1' : ''}">
-          <p class="font-mono text-xs uppercase tracking-widest text-brand-300">${r.date}</p>
-          <h3 class="mt-2 text-2xl font-extrabold">${r.title}</h3>
-          <p class="mt-3 text-brand-200">${r.summary}</p>
-          <div class="mt-6 flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-            <div class="text-4xl font-extrabold text-spark-400">${r.attendees}+</div>
-            <div class="text-sm text-brand-200">peserta hadir<br/><span class="text-xs text-brand-300">(angka contoh)</span></div>
-          </div>
-          <p class="mt-6 text-xs font-bold uppercase tracking-wider text-brand-300">Pilar</p>
-          <div class="mt-2 flex flex-wrap gap-2">${r.pillars.map(p => `<span class="rounded-full bg-brand-600/40 px-3 py-1 text-xs font-semibold text-brand-100 ring-1 ring-brand-400/30">${p}</span>`).join('')}</div>
-          <p class="mt-6 text-xs font-bold uppercase tracking-wider text-brand-300">Output Kegiatan</p>
-          <ul class="mt-2 space-y-2 text-sm">${r.outputs.map(o => `<li class="flex gap-2"><span class="text-spark-400">✓</span>${o}</li>`).join('')}</ul>
+      <article class="reveal flex flex-col overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
+        <button type="button" class="recap-open group relative block aspect-[4/5] overflow-hidden bg-brand-900" data-i="${i}" aria-label="Lihat foto ${esc(r.title)}">
+          <img src="${photo(r, 1)}" alt="${esc(r.title)}" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
+          ${r.n > 1 ? `<span class="absolute bottom-3 right-3 rounded-full bg-brand-950/80 px-3 py-1 text-xs font-semibold">📷 ${r.n} foto</span>` : ''}
+        </button>
+        <div class="flex flex-1 flex-col p-5">
+          <p class="font-mono text-xs uppercase tracking-widest text-spark-400">${esc(r.date)}</p>
+          <h3 class="mt-2 text-lg font-extrabold leading-snug">${esc(r.title)}</h3>
+          ${r.place ? `<p class="mt-1 text-sm text-brand-300">📍 ${esc(r.place)}</p>` : ''}
+          ${r.stat ? `<p class="mt-3 inline-flex w-fit rounded-full bg-spark-500 px-3 py-1 text-xs font-bold text-brand-950">${esc(r.stat)}</p>` : ''}
+          <p class="mt-3 line-clamp-4 text-sm leading-relaxed text-brand-200">${esc(r.desc)}</p>
         </div>
       </article>`).join('');
+
+    // Lightbox galeri
+    (function () {
+      const box = document.getElementById('lightbox'), img = document.getElementById('lbImg'),
+            cap = document.getElementById('lbCap'), cnt = document.getElementById('lbCount');
+      let r = null, k = 1, last = null;
+      const show = () => { img.src = photo(r, k); img.alt = `${r.title} (${k}/${r.n})`; cap.textContent = r.title; cnt.textContent = r.n > 1 ? `${k} / ${r.n}` : '';
+        document.getElementById('lbPrev').hidden = document.getElementById('lbNext').hidden = r.n < 2; };
+      const open = i => { r = RECAPS[i]; k = 1; show(); box.classList.remove('hidden'); box.classList.add('flex'); document.getElementById('lbClose').focus(); };
+      const close = () => { box.classList.add('hidden'); box.classList.remove('flex'); last && last.focus(); };
+      const step = d => { k = (k - 1 + d + r.n) % r.n + 1; show(); };
+      document.querySelectorAll('.recap-open').forEach(b => b.addEventListener('click', () => { last = b; open(+b.dataset.i); }));
+      document.getElementById('lbClose').addEventListener('click', close);
+      document.getElementById('lbPrev').addEventListener('click', () => step(-1));
+      document.getElementById('lbNext').addEventListener('click', () => step(1));
+      box.addEventListener('click', e => { if (e.target === box) close(); });
+      document.addEventListener('keydown', e => { if (box.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft' && r.n > 1) step(-1); if (e.key === 'ArrowRight' && r.n > 1) step(1); });
+    })();
 
     // ================== RENDER: JOBS ==================
     function renderJobs() {
