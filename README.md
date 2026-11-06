@@ -1,6 +1,6 @@
 # ILASTRA — Landing Page
 
-Landing page resmi **ILASTRA (Ikatan Alumni Politeknik Astra)**: profil, program kerja, event, recap kegiatan, dan Magang Hub.
+Landing page resmi **ILASTRA (Ikatan Alumni Politeknik Astra)**: profil, program kerja, dan event. Seksi Recap dan Magang Hub sementara dinonaktifkan (masih ada di kode, atribut `hidden`).
 
 - Rancangan lengkap (sitemap, wireframe, copywriting, palet warna & tipografi): [`docs/RANCANGAN.md`](docs/RANCANGAN.md)
 - Halaman: [`index.html`](index.html) (HTML + Tailwind CSS)
@@ -21,4 +21,6 @@ Saat mengedit class Tailwind di `index.html`, jalankan `npm run dev` (watch mode
 Workflow `.github/workflows/pages.yml` men-deploy otomatis ke GitHub Pages setiap push ke `main`.
 Pastikan **Settings → Pages → Source = GitHub Actions** sudah aktif.
 
-> Data event, lowongan, recap, dan statistik di halaman masih **contoh** — ganti dengan data resmi.
+Website live di https://ilastra.id. Konten bersumber dari Google Sheet `ILASTRA_Data_Website` dan diperbarui manual.
+
+Lisensi komponen pihak ketiga: lihat [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
